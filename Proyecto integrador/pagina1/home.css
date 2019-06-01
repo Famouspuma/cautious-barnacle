@@ -28,3 +28,7 @@ body{
   height: 800px;
   background-color: grey;
 } */
+
+body{
+  padding-top: 80px;
+}
