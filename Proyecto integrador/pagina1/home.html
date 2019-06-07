@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="home.css">
+    <!-- <link rel="stylesheet" href="../universal.css"> -->
   </head>
   <body>
 
@@ -39,7 +40,7 @@
             Géneros
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Accion</a>
+            <a class="dropdown-item" href="#">Acción</a>
             <a class="dropdown-item" href="#">Aventura</a>
             <a class="dropdown-item" href="#">Comedia</a>
             <a class="dropdown-item" href="#">Ciencia ficcion</a>
@@ -52,29 +53,69 @@
             <a class="dropdown-item" href="#">Otra</a>
           </div>
         </li>
-
-
         <li class="nav-item">
           <a class="nav-link" href="#">Tus peliculas favoritas</a>
         </li>
-
         <li class="nav-item active">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
         </li>
-
       </ul>
-
-
-
     </div>
   </nav>
 </header>
+
+
+<!-- boton de log in -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alto ahi cowboy</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input type="email" class="form-control" id="recipient-name">
+          </div>
+          <div class="">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Cual es tu género?</label>
+          <select class="form-control form-control-sm">
+            <option selected>Elegir...</option>
+             <option value="H">Hombre</option>
+             <option value="M">Mujer</option>
+          </select>
+        </div> <br>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+            <label class="form-check-label" for="autoSizingCheck">Recordar mi información</label>
+          </div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             <button type="submit" class="btn btn-primary">Send message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- termina el header -->
 
 
 <!-- este es el carousel -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -99,17 +140,14 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div> -->
 
 <!-- clase para las imagenes a continuacion de "carrousel-item" iria "w-100" -->
 
 <!-- aca termina el carousel -->
 
 
-
-
-<br>
-
+<br><br><br><br>
 
 
 <!-- el resto del body va aca en columnas -->
@@ -123,91 +161,110 @@
 
 
 <div class="row">
+
     <div class="col-md-4 alert-warning">
-      <h1>Populares</h1>
+      <h1>Populares</h1> <br><br>
       <div class="row">
         <div class="col-md-6">
-          Peli1
+          Peli 1
         </div>
         <div class="col-md-6">
-          Peli2
+          Peli 2
+        </div> <br><br>
+        <div class="col-md-6">
+          Peli 3
         </div>
         <div class="col-md-6">
-          Peli1
+          Peli 4
+        </div><br><br>
+        <div class="col-md-6">
+          Peli 5
         </div>
         <div class="col-md-6">
-          Peli2
+          Peli 6
+        </div><br><br>
+        <div class="col-md-6">
+          Peli 7
+        </div>
+        <div class="col-md-6">
+          Peli 8
         </div>
       </div>
     </div>
-    <div class="col-md-4 d-flex justify-content-center alert-primary">Mejores puntajes</div>
-    <div class="col-md-4 d-flex justify-content-center alert-danger">Nuevos lanzamientos</div>
+
+
+    <div class="col-md-4  justify-content-center alert-primary">
+      <h1>Mejores Puntajes</h1> <br><br>
+      <div class="row">
+        <div class="col-md-6">
+          Peli 1
+        </div>
+        <div class="col-md-6">
+          Peli 2
+        </div> <br><br>
+        <div class="col-md-6">
+          Peli 3
+        </div>
+        <div class="col-md-6">
+          Peli 4
+        </div><br><br>
+        <div class="col-md-6">
+          Peli 5
+        </div>
+        <div class="col-md-6">
+          Peli 6
+        </div><br><br>
+        <div class="col-md-6">
+          Peli 7
+        </div>
+        <div class="col-md-6">
+          Peli 8
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 justify-content-center alert-danger">
+      <h1>Nuevos lanzamientos</h1> <br><br>
+      <div class="row">
+        <div class="col-md-6">
+          Peli 1
+        </div>
+        <div class="col-md-6">
+          Peli 2
+        </div> <br><br>
+        <div class="col-md-6">
+          Peli 3
+        </div>
+        <div class="col-md-6">
+          Peli 4
+        </div><br><br>
+        <div class="col-md-6">
+          Peli 5
+        </div>
+        <div class="col-md-6">
+          Peli 6
+        </div><br><br>
+        <div class="col-md-6">
+          Peli 7
+        </div>
+        <div class="col-md-6">
+          Peli 8
+        </div>
+      </div>
+    </div>
 </div>
 
 
 <br><br><br><br>
 
-<!-- boton de log in -->
 
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Alto ahi cowboy</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Email:</label>
-            <input type="email" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Queres agregar algun comentario?</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-          <div class="form-check">
-             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-             <label class="form-check-label" for="exampleCheck1">Me gustaria recibir novedades</label>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<!-- <div class="container">
-  <div class="row"> Populares
-  <div class="col-md-4 d-flex justify-content-center">
-   <div class="row">
-      <div class="col-md-6">
-        peli 1
-      </div>
-      <div class="col-md-6">
-        peli 2
-      </div>
-
-   </div>
-  </div>
-  </div>
-</div> -->
 
 <!-- terminan las columnas -->
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+
 
 <!-- aca empieza el footer -->
 
