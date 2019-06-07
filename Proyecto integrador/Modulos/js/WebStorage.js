@@ -1,1 +1,8 @@
-console.log(hola);
+window.addEventListener("load", function () {
+
+var form = document.querySelector("#form")
+form.onsubmit= function () {
+  
+}
+
+} )
