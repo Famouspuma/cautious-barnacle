@@ -59,7 +59,7 @@
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link" href="#">Log In <span class="sr-only">(current)</span></a>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
         </li>
 
       </ul>
@@ -123,7 +123,23 @@
 
 
 <div class="row">
-    <div class="col-md-4 d-flex justify-content-center alert-warning">Populares</div>
+    <div class="col-md-4 alert-warning">
+      <h1>Populares</h1>
+      <div class="row">
+        <div class="col-md-6">
+          Peli1
+        </div>
+        <div class="col-md-6">
+          Peli2
+        </div>
+        <div class="col-md-6">
+          Peli1
+        </div>
+        <div class="col-md-6">
+          Peli2
+        </div>
+      </div>
+    </div>
     <div class="col-md-4 d-flex justify-content-center alert-primary">Mejores puntajes</div>
     <div class="col-md-4 d-flex justify-content-center alert-danger">Nuevos lanzamientos</div>
 </div>
@@ -133,7 +149,7 @@
 
 <!-- boton de log in -->
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -151,14 +167,18 @@
             <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Te gustaria agregar algun comentario?</label>
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input type="email" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Queres agregar algun comentario?</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
+          <div class="form-check">
+             <input type="checkbox" class="form-check-input" id="exampleCheck1">
+             <label class="form-check-label" for="exampleCheck1">Me gustaria recibir novedades</label>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
       </div>
     </div>
   </div>
