@@ -38,6 +38,10 @@ document.querySelector("form").addEventListener("click", function(event){
           // document.querySelector("div").innerHTML += "</div>"
       }
     })
+    .catch(function(error) {
+          console.log("Error: " + error);
+    })
+
 
 ////////////////////////// CARGA mejorPuntajes //////////////////////////////////////////////////
     fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US&page=1")
@@ -66,6 +70,11 @@ document.querySelector("form").addEventListener("click", function(event){
         }
       })
 
+      .catch(function(error) {
+            console.log("Error: " + error);
+      })
+
+
 //////////////////////// CARGA nuevosLanzamientos //////////////////////////////////////////////////
 fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US&page=1")
   .then(function(respuesta) {
@@ -89,15 +98,8 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
 
     }
   })
-
-
-
-
-
-
-
-    .catch(function(error) {
-      console.log("Error: " + error);
-    })
+  .catch(function(error) {
+    console.log("Error: " + error);
+  })
 
 }
