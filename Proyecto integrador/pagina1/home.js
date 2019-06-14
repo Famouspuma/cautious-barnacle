@@ -180,6 +180,7 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
         console.log(informacion.results.length);
         var div
         var imagen
+        var nombre
         for (var i = 0; i < informacion.results.length; i++) {
             console.log(informacion[i]);
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
