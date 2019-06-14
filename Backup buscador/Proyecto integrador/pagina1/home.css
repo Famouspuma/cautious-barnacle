@@ -1,0 +1,35 @@
+*{box-sizing: border-box}
+
+/* header{
+  width: 100%;
+  position: fixed;
+  background-color: white;
+}
+
+nav{
+  overflow: hidden;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul.ul-logo{
+  float: left;
+}
+
+nav ul.ul-menu li{
+  float: right;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+body{
+  height: 800px;
+  background-color: grey;
+} */
+
+body{
+  padding-top: 80px;
+  background-color: #10171E;
+}
