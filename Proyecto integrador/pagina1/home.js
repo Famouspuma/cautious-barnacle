@@ -24,18 +24,12 @@ document.querySelector("form").addEventListener("click", function(event){
           imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
           nombre = informacion.results[i].title;
           div = "<div class='col-md-6 populares'>"
-          div +=    "<img class='w-100 card-img' src=" + imagen + ">"
-          div +=    "<h5 class='card-title'>" + nombre + "</h5>";
+          div +=  "<a href='../pagina5/detallePelicula.html'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
+          div +=  "<h5 class='card-title'>" + nombre + "</h5>";
           div += "</div>"
 
           document.querySelector("div.populares").innerHTML += div
 
-          // document.querySelector("populares").innerHTML += "<div class=" + "peliculaPopular" + ">" //CONTENEDOR DE PELICULA
-          //   var imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
-          //   document.querySelector("div").innerHTML += "<img src=" + imagen + ">"
-          //   var nombre = informacion.results[i].title;
-          //   document.querySelector("div").innerHTML += "<h1>" + nombre + "<h1>";
-          // document.querySelector("div").innerHTML += "</div>"
       }
     })
     .catch(function(error) {
@@ -61,7 +55,7 @@ document.querySelector("form").addEventListener("click", function(event){
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
             nombre = informacion.results[i].title;
             div = "<div class='col-md-6 populares'>"
-            div +=    "<img class='w-100 card-img' src=" + imagen + ">"
+            div +=  "<a href='../pagina5/detallePelicula.html'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
             div +=    "<h5 class='card-title'>" + nombre + "</h5>";
             div += "</div>"
 
@@ -122,7 +116,7 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
         nombre = informacion.results[i].title;
         div = "<div class='col-md-6 populares'>"
-        div +=    "<img class='w-100 card-img' src=" + imagen + ">"
+        div +=  "<a href='../pagina5/detallePelicula.html'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
         div +=    "<h5 class='card-title'>" + nombre + "</h5>";
         div += "</div>"
         document.querySelector("div.nuevosLanzamientos").innerHTML += div
@@ -180,7 +174,6 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
         console.log(informacion.results.length);
         var div
         var imagen
-        var nombre
         for (var i = 0; i < informacion.results.length; i++) {
             console.log(informacion[i]);
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
