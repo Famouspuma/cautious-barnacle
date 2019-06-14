@@ -120,7 +120,6 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
         div +=    "<h5 class='card-title'>" + nombre + "</h5>";
         div += "</div>"
         document.querySelector("div.nuevosLanzamientos").innerHTML += div
-
     }
   })
   .catch(function(error) {
@@ -179,13 +178,10 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
             nombre = informacion.results[i].title;
 
-            li  = "<li id=´perro´>"
+            li  = "<li>"
             li +=    "<img src=" + imagen + " alt=´´>"
             li +=    "<div class=´uk-position-center uk-panel´></div>"
             li +=  "</li>"
-
-
-
 
             document.querySelector("#gato").innerHTML += li
 
