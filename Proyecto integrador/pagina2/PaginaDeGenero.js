@@ -29,7 +29,7 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=0bcd16440b25702a4e264
         div +=    "<img class='w-100 card-img' src=" + imagen + ">"
         div +=    "<h5 class='card-title'>" + nombre + "</h5>";
         div += "</div>"
-        document.querySelector("div.genero").innerHTML += div
+        document.querySelector(".genero").innerHTML += div
 
     }
   })

@@ -1,25 +1,37 @@
 window.onload = function() {
+
   var queryString = new URLSearchParams(location.search)
 
   var busco = queryString.get("buscador")
+  console.log("busqueda" + busco);
 
-  fetch("https://api.giphy.com/v1/gifs/search?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU&q=" + busco + "&limit=25&offset=0&rating=G&lang=en")
-    .then(function(respuesta) {
-      return respuesta.json()
-    })
-    .then(function(informacion) {
-      var arrayDeGifs = informacion.data
+  fetch("https://api.themoviedb.org/3/search/movie?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US&query=" + busco + "&page=1&include_adult=false")
+  .then(function(respuesta) {
+    return respuesta.json()
+  })
 
-      for (var i = 0; i < arrayDeGifs.length; i++) {
-        var titulo =  arrayDeGifs[i].title
-        var url = arrayDeGifs[i].images.original.url
-        var id = arrayDeGifs[i].id
+  .then(function(informacion) {
+    console.log(informacion);
+    console.log(informacion.results.length);
+    var div
+    var imagen
+    var nombre
+    var genero
+    for (var i = 0; i < informacion.results.length; i++) {
+        console.log(informacion.results[i]);
+        imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
+        nombre = informacion.results[i].title;
+        div = "<div class='col-md-2 populares'>"
+        div +=    "<img class='w-100 card-img' src=" + imagen + ">"
+        div +=    "<h5 class='card-title'>" + nombre + "</h5>";
+        div += "</div>"
+        document.querySelector(".resultados").innerHTML += div
 
-        document.querySelector("div.contenido").innerHTML += "<p> <a href=detalleGif.html?idGif=" + id + ">" + titulo + "</a></p>"
-        document.querySelector("div.contenido").innerHTML += "<img src=" + url + " >"
-      }
-    })
-    .catch(function(error) {
-      console.log("Error: " + error);
-    })
-}
+    }
+  })
+
+  .catch(function(error) {
+        console.log("Error: " + error);
+  })
+
+  }

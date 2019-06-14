@@ -106,8 +106,9 @@
 
 <!-- el resto del body va aca en columnas -->
 
-<form class="form-inline my-2 my-lg-0 d-flex justify-content-center" >
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+<form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="../pagina4/ResultadosBusqueda.html"  >
+  <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 </form>
 
@@ -119,7 +120,7 @@
 
     <div class="col-md-12 alert-warning">
       <h1> Resultados de la busqueda xDDDD</h1> <br><br>
-      <div class="row genero">
+      <div class="row resultados">
       </div>
     </div>
 
@@ -179,6 +180,6 @@
 
 <script type="text/javascript" src="../Modulos/js/listageneros.js"> </script>
 
-<script type="text/javascript" src="PaginaDeGenero.js">
+<script type="text/javascript" src="PaginaDeGenero.js"></script>
 
-</script>
+<script type="text/javascript"src="../Modulos/js/buscador.js"> </script>
