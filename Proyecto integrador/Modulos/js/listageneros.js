@@ -9,7 +9,6 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=0bcd16440b25702a4e2
     return respuesta.json()
   })
   .then(function(informacion) {
-    console.log(informacion)
     var div
     var nombre
     var lista = document.querySelector("#generos");
@@ -17,8 +16,6 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=0bcd16440b25702a4e2
         // console.log(informacion.genres[i]);
         nombre = informacion.genres[i].name;
         id = informacion.genres[i].id;
-        console.log(id);
-        console.log(nombre);
         lista.innerHTML += "<a class='dropdown-item' href=../pagina2/listadoGenero.html?id=" + id +  ">" + nombre + "</a>";
         // console.log(lista);
 

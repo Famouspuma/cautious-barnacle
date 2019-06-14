@@ -19,12 +19,14 @@ document.querySelector("form").addEventListener("click", function(event){
       var div
       var imagen
       var nombre
+      var id
       for (var i = 0; i < informacion.results.length; i++) {
           console.log(informacion[i]);
           imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
           nombre = informacion.results[i].title;
+          id = informacion.results[i].id;
           div = "<div class='col-md-6 populares'>"
-          div +=  "<a href='../pagina5/detallePelicula.html'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
+          div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
           div +=  "<h5 class='card-title'>" + nombre + "</h5>";
           div += "</div>"
 
@@ -167,7 +169,6 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
       .then(function(respuesta) {
         return respuesta.json()
       })
-
       .then(function(informacion) {
         console.log(informacion);
         console.log(informacion.results.length);
