@@ -137,38 +137,70 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
 
 ///////////////////////////////CARROUSEL/////////////////////////////
 
+  //
+  // fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=e2d1aa72fbd5bdcc6bf4f5760ec0b244&language=en-US&page=1")
+  //
+  //   .then(function(respuesta) {
+  //     return respuesta.json()
+  //   })
+  //
+  //   .then(function(informacion) {
+  //     console.log(informacion);
+  //     console.log(informacion.results.length);
+  //     var div
+  //     var imagen
+  //     for (var i = 0; i < informacion.results.length; i++) {
+  //         console.log(informacion[i]);
+  //         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
+  //         nombre = informacion.results[i].title;
+  //
+  //         div  = "<div class=´carousel-item active w-100´>"
+  //         div +=    "<img src=" + imagen + " class=´d-block´ alt=´´>";
+  //         div +=  "</div>"
+  //
+  //
+  //         document.querySelector("div.perro").innerHTML += div
+  //
+  //     }
+  //   })
+  //
+  //   .catch(function(error) {
+  //         console.log("Error: " + error);
+  //   })
 
-  fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=e2d1aa72fbd5bdcc6bf4f5760ec0b244&language=en-US&page=1")
 
-    .then(function(respuesta) {
-      return respuesta.json()
-    })
+    fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=e2d1aa72fbd5bdcc6bf4f5760ec0b244&language=en-US&page=1")
 
-    .then(function(informacion) {
-      console.log(informacion);
-      console.log(informacion.results.length);
-      var div
-      var imagen
-      for (var i = 0; i < informacion.results.length; i++) {
-          console.log(informacion[i]);
-          imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
-          nombre = informacion.results[i].title;
+      .then(function(respuesta) {
+        return respuesta.json()
+      })
 
-          div  = "<div class=´carousel-item active w-100´>"
-          div +=    "<img src=" + imagen + " class=´d-block´ alt=´´>";
-          div +=  "</div>"
+      .then(function(informacion) {
+        console.log(informacion);
+        console.log(informacion.results.length);
+        var div
+        var imagen
+        for (var i = 0; i < informacion.results.length; i++) {
+            console.log(informacion[i]);
+            imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
+            nombre = informacion.results[i].title;
 
-
-          document.querySelector("div.perro").innerHTML += div
-
-      }
-    })
-
-    .catch(function(error) {
-          console.log("Error: " + error);
-    })
+            li  = "<li id=´perro´>"
+            li +=    "<img src=" + imagen + " alt=´´>"
+            li +=    "<div class=´uk-position-center uk-panel´></div>"
+            li +=  "</li>"
 
 
+
+
+            document.querySelector("#gato").innerHTML += li
+
+        }
+      })
+
+      .catch(function(error) {
+            console.log("Error: " + error);
+      })
 
 
 
