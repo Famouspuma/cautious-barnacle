@@ -1,5 +1,10 @@
 *{box-sizing: border-box}
 
+
+.uk-notification{
+  z-index: 2000 !important;
+}
+
 /* header{
   width: 100%;
   position: fixed;
