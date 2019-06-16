@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("click", function(event){
 
 });
 
-////////////////////////// CARGA TRENDING //////////////////////////////////////////////////
+////////////////////////// CARGA Populares //////////////////////////////////////////////////
 
   fetch("https://api.themoviedb.org/3/trending/all/day?api_key=0bcd16440b25702a4e2645e9b22f2a2d")
 
@@ -52,12 +52,14 @@ document.querySelector("form").addEventListener("click", function(event){
         var div
         var imagen
         var nombre
+        var id
         for (var i = 0; i < informacion.results.length; i++) {
             console.log(informacion[i]);
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
             nombre = informacion.results[i].title;
+            id = informacion.results[i].id;
             div = "<div class='col-md-6 populares'>"
-            div +=  "<a href='../pagina5/detallePelicula.html'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
+            div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
             div +=    "<h5 class='card-title'>" + nombre + "</h5>";
             div += "</div>"
 
@@ -70,38 +72,6 @@ document.querySelector("form").addEventListener("click", function(event){
             console.log("Error: " + error);
       })
 
-/*
-BACKUP      ////////////////////////// CARGA mejorPuntajes //////////////////////////////////////////////////
-          fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US&page=1")
-
-            .then(function(respuesta) {
-              return respuesta.json()
-            })
-
-            .then(function(informacion) {
-              console.log(informacion);
-              console.log(informacion.results.length);
-              var div
-              var imagen
-              var nombre
-              for (var i = 0; i < informacion.results.length; i++) {
-                  console.log(informacion[i]);
-                  imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
-                  nombre = informacion.results[i].title;
-                  div = "<div class='col-md-6 populares'>"
-                  div +=    "<h3>" + nombre + "<h3>";
-                  div +=    "<img class='w-100' src=" + imagen + ">"
-                  div += "</div>"
-
-                  document.querySelector("div.mejorPuntajes").innerHTML += div
-
-              }
-            })
-
-            .catch(function(error) {
-                  console.log("Error: " + error);
-            })
-*/
 //////////////////////// CARGA nuevosLanzamientos //////////////////////////////////////////////////
 fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US&page=1")
   .then(function(respuesta) {
@@ -113,12 +83,14 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
     var div
     var imagen
     var nombre
+    var id
     for (var i = 0; i < informacion.results.length; i++) {
         console.log(informacion[i]);
         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
         nombre = informacion.results[i].title;
+        id = informacion.results[i].id;
         div = "<div class='col-md-6 populares'>"
-        div +=  "<a href='../pagina5/detallePelicula.html'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
+        div +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
         div +=    "<h5 class='card-title'>" + nombre + "</h5>";
         div += "</div>"
         document.querySelector("div.nuevosLanzamientos").innerHTML += div

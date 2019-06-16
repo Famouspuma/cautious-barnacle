@@ -10,32 +10,31 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
     return respuesta.json()
   })
   .then(function(informacion) {
+    console.log(informacion);
     var div
     var nombre
     var imagen
-    // console.log(informacion.genres[i]);
-    imagen = "https://image.tmdb.org/t/p/w500/" + informacion.poster_path;
+    var descripcion
+    var estreno
+
     nombre = informacion.title;
+    imagen = "https://image.tmdb.org/t/p/w500/" + informacion.poster_path;
+    descripcion = informacion.overview;
+    estreno = informacion.release_date;
     id = informacion.id;
+
     var contenedor = document.querySelector(".row");
-    div =  "<img alt='Responsive image' class='w-100 col-4' src=" + imagen + ">" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
-    div +=  "<div>" + "<h2 class='col-12 '>" + nombre + "</h1>"
-    div +=            "<h3 class='col-12'>" + "detalles" + "</h3>" + "</div>"
 
-    contenedor.innerHTML = div
+    contenedor.innerHTML =  "<div class='col-4 '>"
+                            + "<img class='w-100' src=" + imagen + ">"
+                           + "</div>" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
 
-
-
-
-  //  <div class="row">
-    //  <div class="col-9">.col-9</div>
-      //<div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-      //<div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
-  //  </div>
-
-
-
-        // console.log(lista);
+    contenedor.innerHTML +=  "<div class='col-8 alert alert-warning w-100'>"
+                              + "<h1 class=''>" + nombre + "</h1>"
+                              + "<h5 class=''>" + estreno + "</h5>"
+                              + "<br>"
+                              + "<h5 class=''>" + descripcion + "</h5>"
+                            + "</div>"
 
       })
 // Tengo que cambiar el div por un ul con li internos extraidos de la api.
