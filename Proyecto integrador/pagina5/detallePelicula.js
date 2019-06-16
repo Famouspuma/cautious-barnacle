@@ -1,9 +1,8 @@
 
-
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var id = url.searchParams.get("id");
-
+console.log(id);
 
 fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US")
   .then(function(respuesta) {
@@ -33,12 +32,33 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
                               + "<h1 class=''>" + nombre + "</h1>"
                               + "<h5 class=''>" + estreno + "</h5>"
                               + "<br>"
-                              + "<h5 class=''>" + descripcion + "</h5>"
+                              + "<h5 class='video'>" + descripcion + "</h5>"
                             + "</div>"
 
       })
-// Tengo que cambiar el div por un ul con li internos extraidos de la api.
+
 
   .catch(function(error) {
     console.log("Error: " + error);
   })
+
+//////////////////////////// TRAILER /
+
+fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US")
+  .then(function(respuesta) {
+    return respuesta.json()
+    })
+
+  .then(function(informacion) {
+    console.log(informacion);
+    var contenedor = document.querySelector(".video");
+    var video = informacion.results[0].key
+    console.log(video);
+    contenedor.innerHTML += "<br>"
+                          +"<br>"
+                          + "<iframe class='col-12' width='560' height='315' src='https://www.youtube.com/embed/" + video + "frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+    })
+
+  .catch(function(error) {
+    console.log("Error: " + error);
+    })
