@@ -2,7 +2,7 @@ window.onload = function () {
 
 // BUSCADOR
 document.querySelector("form").addEventListener("click", function(event){
-  
+
 });
 
 ////////////////////////// CARGA TRENDING //////////////////////////////////////////////////

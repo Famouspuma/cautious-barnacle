@@ -3,7 +3,6 @@
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var id = url.searchParams.get("id");
-console.log("este es el id : " + id);
 
 
 fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US")
@@ -11,20 +10,27 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
     return respuesta.json()
   })
   .then(function(informacion) {
-    console.log(informacion)
     var div
     var nombre
     var imagen
-    var contenido = document.querySelector(".detalles");
     // console.log(informacion.genres[i]);
-    imagen = "https://image.tmdb.org/t/p/w500/" +informacion.poster_path;
-
+    imagen = "https://image.tmdb.org/t/p/w500/" + informacion.poster_path;
     nombre = informacion.title;
     id = informacion.id;
-    console.log(id);
-    console.log(nombre);
-    contenido.innerHTML = "<h1>" + nombre + "</h1>"
-    contenido.innerHTML += "<img class='w-100 card-img md-6'src=" + imagen +">" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
+    var contenedor = document.querySelector(".row");
+    div =  "<img alt='Responsive image' class=' img-rounded img-fluid card-img col-4' src=" + imagen + ">" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
+    contenedor.innerHTML = div
+    contenedor.innerHTML +=  "<h1 class='col-8 '>" + nombre + "</h1>"
+
+
+
+  //  <div class="row">
+    //  <div class="col-9">.col-9</div>
+      //<div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+      //<div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+  //  </div>
+
+
 
         // console.log(lista);
 
