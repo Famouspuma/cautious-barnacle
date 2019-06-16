@@ -18,9 +18,12 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
     nombre = informacion.title;
     id = informacion.id;
     var contenedor = document.querySelector(".row");
-    div =  "<img alt='Responsive image' class=' img-rounded img-fluid card-img col-4' src=" + imagen + ">" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
+    div =  "<img alt='Responsive image' class='w-100 col-4' src=" + imagen + ">" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
+    div +=  "<div>" + "<h2 class='col-12 '>" + nombre + "</h1>"
+    div +=            "<h3 class='col-12'>" + "detalles" + "</h3>" + "</div>"
+
     contenedor.innerHTML = div
-    contenedor.innerHTML +=  "<h1 class='col-8 '>" + nombre + "</h1>"
+
 
 
 
