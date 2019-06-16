@@ -15,8 +15,8 @@
 
 <!-- empieza el header -->
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<header >
+  <nav id="rata" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="home.html"> <img src="https://pa1.narvii.com/6212/3f97bf5294b0f2392aec2dd6bb2d00b2881fb766_hq.gif" width="160" height="64.5" class="d-inline-block align-top" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,11 +24,16 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Bienvenido master</a>
         </li>
       </ul>
+
+      <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="../pagina4/ResultadosBusqueda.html"  >
+        <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
 
 
       <ul class="navbar-nav ml-auto">
@@ -45,9 +50,14 @@
 
           </div>
         </li>
+
+
         <li class="nav-item">
           <a class="nav-link" href="#">Tus peliculas favoritas</a>
         </li>
+
+
+
         <li class="nav-item active">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
         </li>
@@ -108,6 +118,7 @@
 <!-- termina el header -->
 
 
+<!-- empieza el carousel -->
 
 <div class="uk-position-relative uk-visible-toggle uk-light uk-slider" tabindex="-1" uk-slider="autoplay: true">
 
@@ -122,34 +133,6 @@
 
 </div>
 
-
-
-
-<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-
-    <div class="perro">
-
-    </div>
-
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
-
-<!-- clase para las imagenes a continuacion de "carrousel-item" iria "w-100" -->
-
 <!-- aca termina el carousel -->
 
 
@@ -158,33 +141,30 @@
 
 <!-- el resto del body va aca en columnas -->
 
-<form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="../pagina4/ResultadosBusqueda.html"  >
-  <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
+
 
 <br><br>
 
-<div class="container-fluid">
+<div class="container-fluid" >
 
-<div class="row">
+<div class="row" >
 
-    <div id="" class="col-md-4 alert-warning">
-      <h1>Populares</h1> <br><br>
+    <div class="col-md-4 alert-warning text-center pato"><br>
+      <h1 class="font-weight-bold oso">Populares</h1> <br>
       <div class="row populares ">
       </div>
     </div>
 
 
-    <div class="col-md-4 alert-primary">
-      <h1>Mejores Puntajes</h1> <br><br>
+    <div class="col-md-4 alert-primary text-center pato"><br>
+      <h1 class="font-weight-bold oso">Mejores Puntajes</h1> <br>
       <div class="row mejorPuntajes">
       </div>
     </div>
 
 
-    <div class="col-md-4 alert-danger">
-      <h1>Nuevos lanzamientos</h1> <br><br>
+    <div class="col-md-4 alert-danger text-center pato"><br>
+      <h1 class="font-weight-bold oso">Nuevos lanzamientos</h1> <br>
       <div class="row nuevosLanzamientos">
 
       </div>

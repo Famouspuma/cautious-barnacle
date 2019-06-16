@@ -26,7 +26,7 @@ document.querySelector("form").addEventListener("click", function(event){
           nombre = informacion.results[i].title;
           id = informacion.results[i].id;
           div = "<div class='col-md-6 populares'>"
-          div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
+          div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img rounded-0 'src=" + imagen +">" + "</a>"
           div +=  "<h5 class='card-title'>" + nombre + "</h5>";
           div += "</div>"
 
