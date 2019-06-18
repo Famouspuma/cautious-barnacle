@@ -17,13 +17,15 @@ window.onload = function() {
     var imagen
     var nombre
     var genero
+    var id
     document.querySelector(".busqueda").innerHTML += "Resultados para: " + busco
     for (var i = 0; i < informacion.results.length; i++) {
         console.log(informacion.results[i]);
         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
         nombre = informacion.results[i].title;
+        id = informacion.results[i].id;
         div = "<div class='col-md-2 populares'>"
-        div +=    "<img class='w-100 card-img' src=" + imagen + ">"
+        div +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img' src=" + imagen + ">" + "</a>"
         div +=    "<h5 class='card-title'>" + nombre + "</h5>";
         div += "</div>"
         document.querySelector(".resultados").innerHTML += div

@@ -24,15 +24,17 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
 
     var contenedor = document.querySelector(".row");
 
-    contenedor.innerHTML =  "<div class='col-4 '>"
+    contenedor.innerHTML =  "<div class='col-4  '>"
                             + "<img class='w-100 rounded ' src=" + imagen + ">"
                            + "</div>" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
 
     contenedor.innerHTML +=  "<div class='col-8 w-100 columna text-white rounded'>"
+                              + "<br>"
                               + "<h1 class=''>" + nombre + "</h1>"
                               + "<h5 class=''>" + "Lanzamiento: " + estreno + "</h5>"
                               + "<br>"
                               + "<h5 class='video'>" + descripcion + "</h5>"
+                              + "<br>"
                             + "</div>"
 
       })

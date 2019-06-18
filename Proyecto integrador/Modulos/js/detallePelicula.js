@@ -24,13 +24,13 @@ document.querySelector("form").addEventListener("click", function(event){
           imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
           nombre = informacion.results[i].title;
           div = "<div class='col-md-6 populares'>"
-          div +=    "<img class='w-100 card-img' src=" + imagen + ">"
+          div +=    "<img class='w-100 card-img my-auto' src=" + imagen + ">"
           div +=    "<h5 class='card-title'>" + nombre + "</h5>";
           div += "</div>"
 
           document.querySelector(".detalles").innerHTML += div
 
-          
+
 
       }
     })
