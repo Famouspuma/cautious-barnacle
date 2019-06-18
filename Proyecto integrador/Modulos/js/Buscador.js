@@ -17,6 +17,7 @@ window.onload = function() {
     var imagen
     var nombre
     var genero
+    document.querySelector(".busqueda").innerHTML += "Resultados para: " + busco
     for (var i = 0; i < informacion.results.length; i++) {
         console.log(informacion.results[i]);
         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
@@ -26,6 +27,7 @@ window.onload = function() {
         div +=    "<h5 class='card-title'>" + nombre + "</h5>";
         div += "</div>"
         document.querySelector(".resultados").innerHTML += div
+
 
     }
   })
