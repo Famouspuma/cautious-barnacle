@@ -51,11 +51,12 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=0bcd16440b25
   .then(function(informacion) {
     console.log(informacion);
     var contenedor = document.querySelector(".video");
-    var video = informacion.results[0].key
+    var video = "https://www.youtube.com/embed/" + informacion.results[0].key
     console.log(video);
+
     contenedor.innerHTML += "<br>"
                           +"<br>"
-                          + "<iframe class='col-12' width='560' height='315' src='https://www.youtube.com/embed/" + video + "frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+                          + "<iframe class='col-12' width='640' height='480' src='" + video + " 'frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
     })
 
   .catch(function(error) {
