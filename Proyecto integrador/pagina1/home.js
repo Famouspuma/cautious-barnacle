@@ -115,9 +115,9 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
             console.log(informacion[i]);
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
             nombre = informacion.results[i].title;
-
+            id = informacion.results[i].id;
             li  = "<li>"
-            li +=    "<img src=" + imagen + " alt=´´>"
+            li +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img src=" + imagen + " alt=´´>"
             li +=    "<div class=´uk-position-center uk-panel´></div>"
             li +=  "</li>"
 
