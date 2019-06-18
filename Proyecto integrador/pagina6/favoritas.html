@@ -3,8 +3,140 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+      <link rel="stylesheet" href="favoritas.css">
   </head>
   <body>
+
+    <header >
+      <nav id="rata" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="../pagina1/home.html"> <img src="https://pa1.narvii.com/6212/3f97bf5294b0f2392aec2dd6bb2d00b2881fb766_hq.gif" width="160" height="64.5" class="d-inline-block align-top" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Bienvenido master</a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="../pagina4/ResultadosBusqueda.html"  >
+            <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Géneros
+              </a>
+              <div class="dropdown-menu listaGeneros" id="generos" aria-labelledby="navbarDropdown listadoGeneros">
+                <!-- <a class="dropdown-item" href="#">Acción</a> -->
+
+
+                <div class="dropdown-divider"></div>
+
+              </div>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tus peliculas favoritas</a>
+            </li>
+
+
+
+            <li class="nav-item active">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+
+<!-- boton de log in -->
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Alto ahi cowboy</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form">
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nombre:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="recipient-name">
+              </div>
+              <div class="">
+              <label class="mr-sm-2" for="inlineFormCustomSelect">Cual es tu género?</label>
+              <select class="form-control form-control-sm">
+                <option selected>Elegir...</option>
+                 <option value="H">Hombre</option>
+                 <option value="M">Mujer</option>
+              </select>
+            </div> <br>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                <label class="form-check-label" for="autoSizingCheck">Recordar mi información</label>
+              </div>
+              </div>
+              <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <button type="submit" class="btn btn-primary">Send message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- temrina el boton de log in -->
+
+<!-- termina el header -->
+
+<footer id="footer" class="">
+
+<div class="container position-static">
+  <div class="row">
+
+    <div class="col-md-4">
+      <ul class="list-inline text-left">
+        <li> <a href="#">Twitter</a> </li>
+        <li> <a href="#">Facebook</a> </li>
+        <li> <a href="#">Instagram</a> </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+     <a href="#"> <img src="" alt=""> </a>
+    </div>
+    <div class="col-md-4">
+      <ul class="list-inline text-right nombres"><br>
+        <li class="text-white">Joaquin Berardi</li>
+        <li class="text-white">Marc Doman     </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+</footer>
 
   </body>
 </html>

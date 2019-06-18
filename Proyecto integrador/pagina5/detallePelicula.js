@@ -25,10 +25,10 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
     var contenedor = document.querySelector(".row");
 
     contenedor.innerHTML =  "<div class='col-4 '>"
-                            + "<img class='w-100' src=" + imagen + ">"
+                            + "<img class='w-100 rounded' src=" + imagen + ">"
                            + "</div>" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
 
-    contenedor.innerHTML +=  "<div class='col-8 alert alert-warning w-100'>"
+    contenedor.innerHTML +=  "<div class='col-8 w-100 columna text-white rounded'>"
                               + "<h1 class=''>" + nombre + "</h1>"
                               + "<h5 class=''>" + estreno + "</h5>"
                               + "<br>"
@@ -56,7 +56,7 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=0bcd16440b25
 
     contenedor.innerHTML += "<br>"
                           +"<br>"
-                          + "<iframe class='col-12' width='640' height='480' src='" + video + " 'frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+                          + "<iframe class='col-10 rounded' width='960' height='540' src='" + video + " 'frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
     })
 
   .catch(function(error) {

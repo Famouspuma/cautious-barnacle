@@ -27,7 +27,7 @@ document.querySelector("form").addEventListener("click", function(event){
           id = informacion.results[i].id;
           div = "<div class='col-md-6 populares'>"
           div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img rounded-0 'src=" + imagen +">" + "</a>"
-          div +=  "<h5 class='card-title'>" + nombre + "</h5>";
+          div +=  "<h5 class='card-title text-white'>" + nombre + "</h5>";
           div += "</div>"
 
           document.querySelector("div.populares").innerHTML += div
@@ -60,7 +60,7 @@ document.querySelector("form").addEventListener("click", function(event){
             id = informacion.results[i].id;
             div = "<div class='col-md-6 populares'>"
             div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
-            div +=    "<h5 class='card-title'>" + nombre + "</h5>";
+            div +=    "<h5 class='card-title text-white'>" + nombre + "</h5>";
             div += "</div>"
             document.querySelector("div.mejorPuntajes").innerHTML += div
         }
@@ -89,7 +89,7 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
         id = informacion.results[i].id;
         div = "<div class='col-md-6 populares'>"
         div +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
-        div +=    "<h5 class='card-title'>" + nombre + "</h5>";
+        div +=    "<h5 class='card-title text-white'>" + nombre + "</h5>";
         div += "</div>"
         document.querySelector("div.nuevosLanzamientos").innerHTML += div
     }
@@ -121,7 +121,7 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
             li +=    "<div class=´uk-position-center uk-panel´></div>"
             li +=  "</li>"
 
-            document.querySelector("#gato").innerHTML += li
+            document.querySelector("#carousel").innerHTML += li
 
         }
       })

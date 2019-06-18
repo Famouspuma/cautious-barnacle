@@ -4,7 +4,7 @@
   z-index: 2000 !important;
 }
 
-#rata{
+#header{
   background-color: #000d1e !important;
 }
 
@@ -13,10 +13,11 @@ body{
   background-color: #000d1e;
 }
 
-div.pato {
+div.columnas {
   background-color: #00173a ;
 }
 
-h1.oso {
-  color: #edf3fc;
+
+#footer{
+    background-color: #000d1e !important;
 }

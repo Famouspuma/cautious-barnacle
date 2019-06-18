@@ -7,27 +7,32 @@
     <!-- no sacar -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="porGenero.css">
     <!-- <link rel="stylesheet" href="../universal.css"> -->
   </head>
   <body>
 
 <!-- empieza el header -->
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="../pagina1/home.html"> <img src="https://imgix.culturacolectiva.com/content_image/2019/3/11/1552333560203-paginas-para-ver-peliculas-gratis-online-cine.jpg?auto=compress&q=40&lossless=1&w=1600&h=645&fit=crop&crop=focalpoint" width="160" height="64.5" class="d-inline-block align-top" alt=""></a>
+<header >
+  <nav id="rata" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="home.html"> <img src="https://pa1.narvii.com/6212/3f97bf5294b0f2392aec2dd6bb2d00b2881fb766_hq.gif" width="160" height="64.5" class="d-inline-block align-top" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Bienvenido master</a>
         </li>
       </ul>
+
+      <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="../pagina4/ResultadosBusqueda.html"  >
+        <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
 
 
       <ul class="navbar-nav ml-auto">
@@ -44,9 +49,14 @@
 
           </div>
         </li>
+
+
         <li class="nav-item">
           <a class="nav-link" href="#">Tus peliculas favoritas</a>
         </li>
+
+
+
         <li class="nav-item active">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
         </li>
@@ -101,17 +111,12 @@
 </div>
 
 
-<br><br><br><br>
 
 
-<!-- el resto del body va aca en columnas -->
+<!-- el resto del body va aca -->
 
-<form class="form-inline my-2 my-lg-0 d-flex justify-content-center" >
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
 
-<br><br>
+
 
 <div class="container-fluid">
 
@@ -127,14 +132,8 @@
 </div>
 </div>
 
-<br><br><br><br>
 
 
-
-<!-- terminan las columnas -->
-
-
-<br><br><br><br><br>
 
 
 <!-- aca empieza el footer -->
