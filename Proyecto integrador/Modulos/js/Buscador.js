@@ -1,7 +1,24 @@
-window.onload = function() {
+window.addEventListener("load", function () {
+
+
+  var tresCaracteres = document.querySelector("#caracteres")
+console.log(tresCaracteres);
+
+  // if (tresCaracteres.value.length < 3) {
+  //   event.preventDefault();
+  //   alert("hola")
+    // UIkit.notification({
+    //     message: 'Ingresá un nombre de 3 caracteres o más!',
+    //     status: 'warning',
+    //     pos: 'top-center',
+    //     timeout: 3000
+    //   });
+    // }else {
+// }
+
+
 
   var queryString = new URLSearchParams(location.search)
-
   var busco = queryString.get("buscador")
   console.log("busqueda" + busco);
 
@@ -10,9 +27,13 @@ window.onload = function() {
     return respuesta.json()
   })
 
+
   .then(function(informacion) {
     console.log(informacion);
     console.log(informacion.results.length);
+
+
+
     var div
     var imagen
     var nombre
@@ -32,10 +53,9 @@ window.onload = function() {
 
 
     }
-  })
 
+})
   .catch(function(error) {
         console.log("Error: " + error);
   })
-
-  }
+})
