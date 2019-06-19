@@ -2,23 +2,23 @@ window.addEventListener("load", function () {
 
 
 //////////////////////////////////////////////////////////
-//   guardar_localstorage();
-//   obtener_localstorage();
+//   guardar_sessionstorage();
+//   obtener_sessionstorage();
 //
-//   function obtener_localstorage(){
+//   function obtener_sessionstorage(){
 //
 //
-//   if ( window.localStorage.getItem('nombre')) {
+//   if ( window.sessionStorage.getItem('nombre')) {
 //
 //
 //
 //
 // }else {
-//   console.log("No hay entradas en el local storage");
+//   console.log("No hay entradas en el session storage");
 // }
 // }
 //
-// function guardar_localstorage(){
+// function guardar_sessionstorage(){
 
 // videooooo//////////////////////////////////////////
 
@@ -50,19 +50,19 @@ form.onsubmit= function (event) {
       }
 
 
-      window.localStorage.setItem('user', JSON.stringify(Usuario))
-      console.log(window.localStorage.getItem('user'))
+      window.sessionStorage.setItem('user', JSON.stringify(Usuario))
+      console.log(window.sessionStorage.getItem('user'))
 
-      console.log(JSON.parse(window.localStorage.getItem('user')))
+      console.log(JSON.parse(window.sessionStorage.getItem('user')))
 
 }
 
-  if ( (window.localStorage.getItem('user')) === null) {
+  if ( (window.sessionStorage.getItem('user')) === null) {
   event.preventDefault()
-  console.log("No hay entradas en el local storage");
+  console.log("No hay entradas en el session storage");
 }
 else {
-  document.querySelector("a.bienvenido").innerHTML = "Bienvenido " + JSON.parse(window.localStorage.getItem('user')).nombre
+  document.querySelector("a.bienvenido").innerHTML = "Bienvenido " + JSON.parse(window.sessionStorage.getItem('user')).nombre
 }
 
 })
@@ -77,7 +77,7 @@ else {
 // window.addEventListener("load", function () {
 //
 //
-//   var baseDatos = JSON.parse(window.localStorage.getItem('user'))
+//   var baseDatos = JSON.parse(window.sessionStorage.getItem('user'))
 //   if (baseDatos.nombre != "") {
 //     UIkit.notification({
 //         message: 'Bienvenido '+ baseDatos.nombre,
@@ -136,9 +136,9 @@ else {
 //           genero: genre
 //         }
 //
-//         window.localStorage.setItem('user', JSON.stringify(Usuario))
-//         console.log(window.localStorage.getItem('user'))
-//         console.log(JSON.parse(window.localStorage.getItem('user')))
+//         window.sessionStorage.setItem('user', JSON.stringify(Usuario))
+//         console.log(window.sessionStorage.getItem('user'))
+//         console.log(JSON.parse(window.sessionStorage.getItem('user')))
 //       }
 //
 //
