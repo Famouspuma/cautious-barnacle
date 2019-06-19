@@ -4,6 +4,7 @@ document.querySelector("form").addEventListener("click", function(event){
 
 });
 
+
 ////////////////////////// CARGA Populares //////////////////////////////////////////////////
 
   fetch("https://api.themoviedb.org/3/trending/all/day?api_key=0bcd16440b25702a4e2645e9b22f2a2d")

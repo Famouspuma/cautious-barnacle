@@ -27,6 +27,7 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
       generos += "<a href='../pagina2/listadoGenero.html?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>" + " / ";
       // idGenero += informacion.genres[i].id;
     }
+    generos += "<a href='../pagina2/listadoGenero.html?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>"
     var contenedor = document.querySelector(".row");
 
     contenedor.innerHTML =  "<div class='col-4  '>"

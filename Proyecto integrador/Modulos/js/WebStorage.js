@@ -52,18 +52,18 @@ form.onsubmit= function (event) {
 
       window.localStorage.setItem('user', JSON.stringify(Usuario))
       console.log(window.localStorage.getItem('user'))
+
       console.log(JSON.parse(window.localStorage.getItem('user')))
 
-
 }
 
-  if ( window.localStorage.getItem('Usuario.genero')=== null) {
-
+  if ( (window.localStorage.getItem('user')) === null) {
   event.preventDefault()
   console.log("No hay entradas en el local storage");
-
 }
-
+else {
+  document.querySelector("a.bienvenido").innerHTML = "Bienvenido " + JSON.parse(window.localStorage.getItem('user')).nombre
+}
 
 })
 
