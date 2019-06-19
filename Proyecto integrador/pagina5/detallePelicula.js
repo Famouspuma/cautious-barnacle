@@ -15,13 +15,18 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
     var imagen
     var descripcion
     var estreno
+    var generos = ""
+    var idGenero
 
     nombre = informacion.title;
     imagen = "https://image.tmdb.org/t/p/w500/" + informacion.poster_path;
     descripcion = informacion.overview;
     estreno = informacion.release_date;
     id = informacion.id;
-
+    for (var i = 0; i < (informacion.genres.length - 1); i++) {
+      generos += "<a href='../pagina2/listadoGenero.html?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>" + " / ";
+      // idGenero += informacion.genres[i].id;
+    }
     var contenedor = document.querySelector(".row");
 
     contenedor.innerHTML =  "<div class='col-4  '>"
@@ -32,6 +37,7 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
                               + "<br>"
                               + "<h1 class=''>" + nombre + "</h1>"
                               + "<h5 class=''>" + "Lanzamiento: " + estreno + "</h5>"
+                              + "<h5 class=''>" + "Generos: " + generos + "</h5>"
                               + "<br>"
                               + "<h5 class='video'>" + descripcion + "</h5>"
                               + "<br>"
