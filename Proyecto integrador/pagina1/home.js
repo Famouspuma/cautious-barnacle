@@ -4,17 +4,6 @@ document.querySelector("form").addEventListener("click", function(event){
 
 });
 
-
-// if (tresCaracteres.value.length < 3) {
-//   event.preventDefault();
-//   UIkit.notification({
-//       message: 'Ingresá un nombre de 3 caracteres o más!',
-//       status: 'warning',
-//       pos: 'top-center',
-//       timeout: 3000
-//     });
-//   }
-
 ////////////////////////// CARGA Populares //////////////////////////////////////////////////
 
   fetch("https://api.themoviedb.org/3/trending/all/day?api_key=0bcd16440b25702a4e2645e9b22f2a2d")
@@ -36,6 +25,7 @@ document.querySelector("form").addEventListener("click", function(event){
           nombre = informacion.results[i].title;
           id = informacion.results[i].id;
           div = "<div class='col-md-6 '>"
+          div +=  "<button class='' onclick='peliFavorita("+id+")'>&#10084;</button>"
           div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img rounded-0 'src=" + imagen +">" + "</a>"
           div +=  "<h5 class='card-title text-white'>" + nombre + "</h5> ";
           div += "</div>"
