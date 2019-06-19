@@ -36,11 +36,11 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
 
     contenedor.innerHTML +=  "<div class='col-8 w-100 columna text-white rounded'>"
 
-                              + "<h1 class=''>" + nombre + "</h1>"
-                              + "<h5 class=''>" + "Lanzamiento: " + estreno + "</h5>"
-                              + "<h5 class=''>" + "Generos: " + generos + "</h5>"
-                              
-                              + "<h5 class='video'>" + descripcion + "</h5>"
+
+                              + "<h1 class='text-white'>" + nombre + "</h1>"
+                              + "<h5 class='text-white'>" + "Lanzamiento: " + estreno + "</h5>"
+                              + "<h5 class='text-white'>" + "Géneros: " + generos + "</h5>"
+                              + "<h5 class='video text-white'>" + descripcion + "</h5>"
                               + "<br>"
                             + "</div>"
 
