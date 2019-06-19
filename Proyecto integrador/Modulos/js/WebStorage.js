@@ -23,14 +23,14 @@ window.addEventListener("load", function () {
 // videooooo//////////////////////////////////////////
 
 
-miStorage=window.localStorage;
+
 
 var form = document.querySelector("#form")
 
 
 
 form.onsubmit= function (event) {
-
+      // event.preventDefault()
       var inputNombre = document.querySelector("#name")
       var inputEmail = document.querySelector("#email")
       var inputGenre = document.querySelector("#genre")
@@ -57,14 +57,8 @@ form.onsubmit= function (event) {
 
 }
 
-<<<<<<< HEAD
   if ( (window.localStorage.getItem('user')) === null) {
   event.preventDefault()
-=======
-  if ( window.localStorage.getItem('miStorage')=== null) {
-
-  event.preventDefault();
->>>>>>> master
   console.log("No hay entradas en el local storage");
 }
 else {
