@@ -21,3 +21,12 @@ div.columnas {
 #footer{
     background-color: #000d1e !important;
 }
+
+#logoFooter{
+  width: 20%;
+  height: auto;
+}
+
+#paraSacarMargen{
+  margin-top: 0% !important;
+}

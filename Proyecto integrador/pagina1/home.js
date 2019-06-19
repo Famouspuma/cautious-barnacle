@@ -27,7 +27,7 @@ document.querySelector("form").addEventListener("click", function(event){
           id = informacion.results[i].id;
           div = "<div class='col-md-6 '>"
           div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img rounded-0 'src=" + imagen +">" + "</a>"
-          div +=  "<h5 class='card-title text-white'>" + nombre + "</h5>";
+          div +=  "<h5 class='card-title text-white'>" + nombre + "</h5> ";
           div += "</div>"
 
           document.querySelector("div.populares").innerHTML += div
