@@ -270,7 +270,6 @@ h6,
 * + .uk-heading-large,
 * + .uk-heading-xlarge,
 * + .uk-heading-2xlarge {
-  margin-top: 40px;
 }
 /*
  * Sizes
@@ -2464,7 +2463,6 @@ select.uk-form-width-xsmall {
   .uk-grid + .uk-grid,
   .uk-grid > .uk-grid-margin,
   * + .uk-grid-margin {
-    margin-top: 40px;
   }
 }
 /*
@@ -2513,7 +2511,6 @@ select.uk-form-width-xsmall {
 .uk-grid + .uk-grid-large,
 .uk-grid-large > .uk-grid-margin,
 * + .uk-grid-margin-large {
-  margin-top: 40px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
