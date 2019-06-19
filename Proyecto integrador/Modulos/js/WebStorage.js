@@ -1,30 +1,6 @@
 window.addEventListener("load", function () {
 
 
-//////////////////////////////////////////////////////////
-//   guardar_sessionstorage();
-//   obtener_sessionstorage();
-//
-//   function obtener_sessionstorage(){
-//
-//
-//   if ( window.sessionStorage.getItem('nombre')) {
-//
-//
-//
-//
-// }else {
-//   console.log("No hay entradas en el session storage");
-// }
-// }
-//
-// function guardar_sessionstorage(){
-
-// videooooo//////////////////////////////////////////
-
-
-
-
 var form = document.querySelector("#form")
 
 
@@ -35,13 +11,40 @@ form.onsubmit= function (event) {
       var inputEmail = document.querySelector("#email")
       var inputGenre = document.querySelector("#genre")
       var select = inputGenre.options[ inputGenre.selectedIndex].text
+      var emailRegex = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
 
+
+            if (inputNombre.value.length < 3) {
+              event.preventDefault();
+              UIkit.notification({
+                  message: 'Ingresá un nombre de 3 caracteres o más!',
+                  status: 'warning',
+                  pos: 'top-center',
+                  timeout: 3000
+              });
+            }else if (inputEmail.value == "" ) {
+              event.preventDefault();
+              UIkit.notification({
+                  message: 'Ingresa un email válido',
+                  status: 'primary',
+                  pos: 'top-center',
+                  timeout: 3000
+              });
+
+            }else if (select == "Elegir...") {
+              event.preventDefault()
+              UIkit.notification({
+                  message: 'Elegi un genero',
+                  status: 'primary',
+                  pos: 'top-center',
+                  timeout: 3000
+              });
+
+            }else {
 
       var name = inputNombre.value
       var email = inputEmail.value
       var genre = select
-
-           console.log('Hola');
 
       var Usuario = {
         nombre: name,
@@ -54,7 +57,7 @@ form.onsubmit= function (event) {
       console.log(window.sessionStorage.getItem('user'))
 
       console.log(JSON.parse(window.sessionStorage.getItem('user')))
-
+ }
 }
 
   if ( (window.sessionStorage.getItem('user')) === null) {
@@ -74,9 +77,6 @@ else {
 
 
 
-// window.addEventListener("load", function () {
-//
-//
 //   var baseDatos = JSON.parse(window.sessionStorage.getItem('user'))
 //   if (baseDatos.nombre != "") {
 //     UIkit.notification({
@@ -143,5 +143,3 @@ else {
 //
 //
 //   }
-//
-// } )
