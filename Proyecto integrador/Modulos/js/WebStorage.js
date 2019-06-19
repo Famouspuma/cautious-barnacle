@@ -69,6 +69,7 @@ form.onsubmit= function (event) {
 }
 else {
   document.querySelector("a.bienvenido").innerHTML = "Bienvenido " + JSON.parse(window.sessionStorage.getItem('user')).nombre
+  document.querySelector("a.favoritas").innerHTML = "Tus peliculas favoritas"
 }
 
 })
