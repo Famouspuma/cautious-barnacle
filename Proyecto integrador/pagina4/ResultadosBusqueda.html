@@ -6,9 +6,8 @@
     <title></title>
     <!-- no sacar -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href="ResultadoBusqueda.css">
-
+    <link rel="stylesheet" href="../uikit-3.1.5/css/uikit.min.css" />
   </head>
   <body>
 
@@ -60,7 +59,7 @@
             <button type="button" class="btn btn-primary log" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
           </li>
         </div>
-        
+
       </ul>
     </div>
   </nav>
@@ -82,23 +81,25 @@
         <form id="form">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
-            <input type="email" class="form-control" id="recipient-name">
+            <input type="email" class="form-control" id="email">
           </div>
           <div class="">
           <label class="mr-sm-2" for="inlineFormCustomSelect">Cual es tu género?</label>
-          <select class="form-control form-control-sm">
-            <option selected>Elegir...</option>
-             <option value="H">Hombre</option>
-             <option value="M">Mujer</option>
+          <select class="form-control form-control-sm" id="genre">
+            <option selected value="0">Elegir...</option>
+             <option value="masculino">Hombre</option>
+             <option value="femenino">Mujer</option>
           </select>
         </div> <br>
-          <div class="form-check mb-2">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-            <label class="form-check-label" for="autoSizingCheck">Recordar mi información</label>
+            <label class="form-check-label" for="autoSizingCheck">
+              Recordar mi información
+            </label>
           </div>
           </div>
           <div class="modal-footer">
@@ -113,14 +114,14 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid" >
 
 <div class="row">
 
-    <div class="col-md-12 columna text-white">
+    <div class="col-md-12 columna">
       <br>
       <br>
-      <h1 class="busqueda"> </h1> <br><br>
+      <h1 class="busqueda text-white"> </h1> <br><br>
       <div class="row resultados">
       </div>
     </div>

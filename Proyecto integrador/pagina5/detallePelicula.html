@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <!-- no sacar -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="detallePelicula.css">
-    <!-- SI conectamos UIKIT nos rompe los estilos  <link rel="stylesheet" href="../uikit-3.1.5/css/uikit.min.css" > -->
+    <link rel="stylesheet" href="../uikit-3.1.5/css/uikit.min.css" />
   </head>
   <body>
 
@@ -79,23 +78,25 @@
         <form id="form">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
-            <input type="email" class="form-control" id="recipient-name">
+            <input type="email" class="form-control" id="email">
           </div>
           <div class="">
           <label class="mr-sm-2" for="inlineFormCustomSelect">Cual es tu género?</label>
-          <select class="form-control form-control-sm">
-            <option selected>Elegir...</option>
-             <option value="H">Hombre</option>
-             <option value="M">Mujer</option>
+          <select class="form-control form-control-sm" id="genre">
+            <option selected value="0">Elegir...</option>
+             <option value="masculino">Hombre</option>
+             <option value="femenino">Mujer</option>
           </select>
         </div> <br>
-          <div class="form-check mb-2">
+          <div class="form-check">
             <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-            <label class="form-check-label" for="autoSizingCheck">Recordar mi información</label>
+            <label class="form-check-label" for="autoSizingCheck">
+              Recordar mi información
+            </label>
           </div>
           </div>
           <div class="modal-footer">
@@ -169,6 +170,7 @@
 
 <script type="text/javascript"src="../Modulos/js/buscador.js"> </script>
 
-<script type="text/javascript" src="detallePelicula.js">
+<script type="text/javascript" src="detallePelicula.js"></script>
 
-</script>
+<script src="../uikit-3.1.5/js/uikit-icons.min.js"></script>
+<script src="../uikit-3.1.5/js/uikit.min.js"></script>
