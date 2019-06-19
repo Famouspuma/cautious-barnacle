@@ -17,12 +17,14 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
     var estreno
     var generos = ""
     var idGenero
+    var lenguajeOriginal
 
     nombre = informacion.title;
     imagen = "https://image.tmdb.org/t/p/w500/" + informacion.poster_path;
     descripcion = informacion.overview;
     estreno = informacion.release_date;
     id = informacion.id;
+    lenguajeOriginal = informacion.original_language;
     for (var i = 0; i < (informacion.genres.length - 1); i++) {
       generos += "<a href='../pagina2/listadoGenero.html?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>" + " / ";
       // idGenero += informacion.genres[i].id;
@@ -35,10 +37,10 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=0bcd16440b25702a4e2
                            + "</div>" //ACOMODAR IMAGENES CONTENEDOR BOOSTRAP
 
     contenedor.innerHTML +=  "<div class='col-8 w-100 columna text-white rounded'>"
-
-
+                              + "<br>"
                               + "<h1 class='text-white'>" + nombre + "</h1>"
                               + "<h5 class='text-white'>" + "Lanzamiento: " + estreno + "</h5>"
+                              + "<h5 class='text-white'>" + "Lenguaje original : " + lenguajeOriginal + "</h5>"
                               + "<h5 class='text-white'>" + "Géneros: " + generos + "</h5>"
                               + "<h5 class='video text-white'>" + descripcion + "</h5>"
                               + "<br>"
@@ -73,7 +75,6 @@ fetch("https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=0bcd16440b25
     })
 
 //////////////// Carrousel Recomendadas ///////////////
-
 
 
     fetch("https://api.themoviedb.org/3/movie/" + id + "/similar?api_key=e2d1aa72fbd5bdcc6bf4f5760ec0b244&language=en-US&page=1")
