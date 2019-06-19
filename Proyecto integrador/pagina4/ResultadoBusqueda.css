@@ -15,3 +15,8 @@ div.columna {
 #footer{
     background-color: #000d1e !important;
 }
+
+#logoFooter{
+  width: 20%;
+  height: auto;
+}
