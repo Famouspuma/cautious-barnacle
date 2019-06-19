@@ -1,20 +1,6 @@
 window.addEventListener("load", function () {
 
 
-  var tresCaracteres = document.querySelector("#caracteres")
-console.log(tresCaracteres);
-
-  // if (tresCaracteres.value.length < 3) {
-  //   event.preventDefault();
-  //   alert("hola")
-    // UIkit.notification({
-    //     message: 'Ingresá un nombre de 3 caracteres o más!',
-    //     status: 'warning',
-    //     pos: 'top-center',
-    //     timeout: 3000
-    //   });
-    // }else {
-// }
 
 
 
@@ -58,4 +44,19 @@ console.log(tresCaracteres);
   .catch(function(error) {
         console.log("Error: " + error);
   })
+
+    var tresCaracteres = document.querySelector('header form input')
+    console.log(tresCaracteres);
+    document.querySelector('header form').addEventListener('submit', function(event){
+
+    if (tresCaracteres.value.length < 3) {
+      event.preventDefault();
+      UIkit.notification({
+          message: 'Ingresá un nombre de 3 caracteres o más!',
+          status: 'warning',
+          pos: 'top-center',
+          timeout: 3000
+        });
+      }
+    })
 })

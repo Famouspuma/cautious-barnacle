@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
 // BUSCADOR
 document.querySelector("form").addEventListener("click", function(event){
 
@@ -7,7 +7,6 @@ document.querySelector("form").addEventListener("click", function(event){
 
 // if (tresCaracteres.value.length < 3) {
 //   event.preventDefault();
-//   alert("hola")
 //   UIkit.notification({
 //       message: 'Ingresá un nombre de 3 caracteres o más!',
 //       status: 'warning',
@@ -144,4 +143,4 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
 
 
 
-}
+})

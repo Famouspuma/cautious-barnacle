@@ -9,7 +9,8 @@ window.addEventListener("load", function () {
 
           div.addEventListener("click", function() {
             sessionStorage.clear();
-            location.reload();
+            var url = window.location.href
+            location.href = url;
             var div = "<li class='nav-item active'>"
                 div += "<button type='button' class='btn btn-primary log' data-toggle='modal' data-target='#exampleModal' data-whatever='@mdo'>Log in </button>"
                 div += "</li>"

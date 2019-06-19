@@ -6,7 +6,7 @@ var form = document.querySelector("#form")
 
 
 form.onsubmit= function (event) {
-      // event.preventDefault()
+      event.preventDefault()
       var inputNombre = document.querySelector("#name")
       var inputEmail = document.querySelector("#email")
       var inputGenre = document.querySelector("#genre")
@@ -57,6 +57,9 @@ form.onsubmit= function (event) {
       console.log(window.sessionStorage.getItem('user'))
 
       console.log(JSON.parse(window.sessionStorage.getItem('user')))
+
+      var url = location.href
+      location.href = url;
  }
 }
 
