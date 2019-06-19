@@ -308,7 +308,7 @@ h6,
 @media (min-width: 960px) {
   h1,
   .uk-h1 {
-    font-size: 2.625rem;
+    font-size: 30px;
   }
   h2,
   .uk-h2 {
@@ -3403,7 +3403,7 @@ select.uk-form-width-xsmall {
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
   .uk-article-title {
-    font-size: 2.625rem;
+    font-size: 30px;
   }
 }
 /* Meta
@@ -3692,7 +3692,7 @@ select.uk-form-width-xsmall {
 .uk-search-large .uk-search-input {
   height: 80px;
   background: transparent;
-  font-size: 2.625rem;
+  font-size: 30px;
 }
 /*
  * Icon
