@@ -5,6 +5,17 @@ document.querySelector("form").addEventListener("click", function(event){
 });
 
 
+// if (tresCaracteres.value.length < 3) {
+//   event.preventDefault();
+//   alert("hola")
+//   UIkit.notification({
+//       message: 'Ingresá un nombre de 3 caracteres o más!',
+//       status: 'warning',
+//       pos: 'top-center',
+//       timeout: 3000
+//     });
+//   }
+
 ////////////////////////// CARGA Populares //////////////////////////////////////////////////
 
   fetch("https://api.themoviedb.org/3/trending/all/day?api_key=0bcd16440b25702a4e2645e9b22f2a2d")
