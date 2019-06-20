@@ -24,19 +24,25 @@ document.querySelector("form").addEventListener("click", function(event){
           imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
           nombre = informacion.results[i].title;
           id = informacion.results[i].id;
-          div = "<div class='col-md-6 '>"
-          div +=  "<button class='' onclick='peliFavorita("+id+")'>&#10084;</button>"
+          div = "<div class='col-md-6 padrefav'>"
+          div +=  "<button class='btn text-white fav'>&#10084;</button>" //onclick='peliFavorita("+id+")'
           div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img rounded-0 'src=" + imagen +">" + "</a>"
           div +=  "<h5 class='card-title text-white'>" + nombre + "</h5> ";
           div += "</div>"
-
           document.querySelector("div.populares").innerHTML += div
-
+          /////
+          var fav
+          fav = document.querySelector(".fav")
+          fav.addEventListener("click", function () {
+            var newFav =  "<button class='btn btn-warning fav'>&#10084;</button>"
+            fav.innerHTML = newFav;
+          })
       }
     })
     .catch(function(error) {
           console.log("Error: " + error);
     })
+
 
 
 ////////////////////////// CARGA mejorPuntajes //////////////////////////////////////////////////
