@@ -30,3 +30,7 @@ div.columnas {
 #paraSacarMargen{
   margin-top: 0% !important;
 }
+
+.contenedor{
+  margin: 0 auto;
+}

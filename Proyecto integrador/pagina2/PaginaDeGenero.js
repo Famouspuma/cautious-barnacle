@@ -5,8 +5,8 @@ window.onload = function () {
   var url_string = window.location.href; //window.location.href
   var url = new URL(url_string);
   var id = url.searchParams.get("id");
-  console.log(id);
-  document.querySelector("h1.idGenero").innerHTML = id
+  // console.log(id);
+  // document.querySelector("h1.idGenero").innerHTML = id
 
 
 fetch("https://api.themoviedb.org/3/discover/movie?api_key=0bcd16440b25702a4e2645e9b22f2a2d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + id )
