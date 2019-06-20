@@ -13,36 +13,29 @@ document.querySelector("form").addEventListener("click", function(event){
     })
 
     .then(function(informacion) {
-      console.log(informacion);
-      console.log(informacion.results.length);
+
       var div
       var imagen
       var nombre
       var id
       for (var i = 0; i < informacion.results.length; i++) {
-          console.log(informacion[i]);
           imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
           nombre = informacion.results[i].title;
           id = informacion.results[i].id;
-          div = "<div class='col-md-6 padrefav'>"
-          div +=  "<button class='btn text-white fav'>&#10084;</button>" //onclick='peliFavorita("+id+")'
+          div = "<div class='col-md-6 '>"
           div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img rounded-0 'src=" + imagen +">" + "</a>"
-          div +=  "<h5 class='card-title text-white'>" + nombre + "</h5> ";
+          div +=  "<div class='contenedorBoton'> <h5 class='card-title text-white'>" + nombre + "<button class='btn peliFavorita '>&#10084;</button></h5> </div>  "; //onclick='peliFavorita("+id+")'
+                  //intente dentro de un div, con clases de bootstrap, sin clases de bootstrap, con id, con clases siendo todo lo especifico,
+                  //Nada funciona para capturar ese elemento y que active el evento.
           div += "</div>"
+
           document.querySelector("div.populares").innerHTML += div
-          /////
-          var fav
-          fav = document.querySelector(".fav")
-          fav.addEventListener("click", function () {
-            var newFav =  "<button class='btn btn-warning fav'>&#10084;</button>"
-            fav.innerHTML = newFav;
-          })
+
       }
     })
     .catch(function(error) {
           console.log("Error: " + error);
     })
-
 
 
 ////////////////////////// CARGA mejorPuntajes //////////////////////////////////////////////////
@@ -53,20 +46,19 @@ document.querySelector("form").addEventListener("click", function(event){
       })
 
       .then(function(informacion) {
-        console.log(informacion);
-        console.log(informacion.results.length);
+
         var div
         var imagen
         var nombre
         var id
         for (var i = 0; i < informacion.results.length; i++) {
-            console.log(informacion[i]);
+
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
             nombre = informacion.results[i].title;
             id = informacion.results[i].id;
             div = "<div class='col-md-6'>"
             div +=  "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
-            div +=    "<h5 class='card-title text-white'>" + nombre + "</h5>";
+            div +=  "<div class='contenedorBoton'> <h5 class='card-title text-white'>" + nombre + "<button class=' btn peliFavorita '>&#10084;</button></h5> </div>  "; //onclick='peliFavorita("+id+")'
             div += "</div>"
             document.querySelector("div.mejorPuntajes").innerHTML += div
         }
@@ -82,20 +74,17 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
     return respuesta.json()
   })
   .then(function(informacion) {
-    console.log(informacion);
-    console.log(informacion.results.length);
     var div
     var imagen
     var nombre
     var id
     for (var i = 0; i < informacion.results.length; i++) {
-        console.log(informacion[i]);
         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
         nombre = informacion.results[i].title;
         id = informacion.results[i].id;
         div = "<div class='col-md-6 '>"
         div +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img class='w-100 card-img'src=" + imagen +">" + "</a>"
-        div +=    "<h5 class='card-title text-white'>" + nombre + "</h5>";
+        div +=  "<div class='contenedorBoton'> <h5 class='card-title text-white'>" + nombre + "<button class='btn peliFavorita '>&#10084;</button></h5> </div>  "; //onclick='peliFavorita("+id+")'
         div += "</div>"
         document.querySelector("div.nuevosLanzamientos").innerHTML += div
     }
@@ -113,12 +102,9 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=0bcd16440b25702a4e264
         return respuesta.json()
       })
       .then(function(informacion) {
-        console.log(informacion);
-        console.log(informacion.results.length);
         var div
         var imagen
         for (var i = 0; i < informacion.results.length; i++) {
-            console.log(informacion[i]);
             imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
             nombre = informacion.results[i].title;
             id = informacion.results[i].id;

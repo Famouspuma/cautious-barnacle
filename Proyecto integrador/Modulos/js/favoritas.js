@@ -7,6 +7,40 @@
     // })
 // onclick='peliFavorita("+id+")'
 
+window.addEventListener("load", function () {
+  const element = document.querySelectorAll('.columnas.h5')
+  document.querySelector("div.col-md-4.alert-warning.text-center.columnas")
+  if (element) {
+    element.forEach(function(el){
+      console.log(element);
+       el.addEventListener('click', function () {
+          alert('click');
+       });
+    });
+  }
+
+
+
+
+
+  // var fav = document.querySelectorAll("favorita")
+  //   console.log(fav);
+  //   alert("funciona")
+  //   var newFav =  "<button class='btn btn-warning fav'>&#10084;</button>"
+  //   fav.forEach().innerHTML = newFav;
+})
+
+
+
+
+  //
+  // var fav = document.querySelectorAll("favorita").addEventListener("click", function () {
+  //   console.log(fav);
+  //   alert("funciona")
+  //   var newFav =  "<button class='btn btn-warning fav'>&#10084;</button>"
+  //   fav.innerHTML = newFav;
+  // })
+
 
   //
   //
