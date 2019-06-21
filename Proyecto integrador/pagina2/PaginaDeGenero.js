@@ -15,18 +15,15 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=0bcd16440b25702a4e264
   })
 
   .then(function(informacion) {
-    console.log(informacion);
-    console.log(informacion.results.length);
     var div
     var imagen
     var nombre
     var genero
     for (var i = 0; i < informacion.results.length; i++) {
-        console.log(informacion.results[i]);
         imagen =  "https://image.tmdb.org/t/p/w500/" + informacion.results[i].poster_path;
         nombre = informacion.results[i].title;
         id = informacion.results[i].id;
-        div = "<div class='col-md-2 populares '>"
+        div = "<div class='col-md-2 '>"
         div +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" +  "<img class='w-100 card-img ' src=" + imagen + ">" + "</a>"
         div +=    "<h5 class='card-title text-white'>" + nombre + "</h5>";
         div += "</div>"
