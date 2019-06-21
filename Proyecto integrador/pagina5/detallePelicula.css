@@ -1,3 +1,5 @@
+*{box-sizing: border-box}
+
 #header{
   background-color: #000d1e !important;
 }
@@ -28,4 +30,12 @@ div.columna {
 
 #peliFav{
   margin-left: 77%;
+}
+
+#paraSacarMargen{
+  margin-top: 0% !important;
+}
+
+.contenedor{
+  margin: 0 auto;
 }
